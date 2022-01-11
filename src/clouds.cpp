@@ -25,8 +25,6 @@ std::vector<cloudPosition> setClouds(std::vector<cloudPosition> allClouds, int x
     p.z = z;
     allClouds.push_back(p);
 
-    //cloudData data;
-    //allCloudData.set(allClouds);
     return allClouds;
 }
 
@@ -81,13 +79,13 @@ std::vector<cloudPosition> moveClouds(Map *map, std::vector<cloudPosition> cloud
         cloudPosition p = cloudCopy.back();
         
         if(xyz == 1){ 
-            //map_set(map, p.x + posChange, p.y, p.z, 16, t);
+            map_set(map, p.x + posChange, p.y, p.z, 16, t);
         }
         else if(xyz == 2){ 
-            //map_set(map, p.x, p.y + posChange, p.z, 16, t);
+            map_set(map, p.x, p.y + posChange, p.z, 16, t);
         }
         else if(xyz == 3){ 
-            //map_set(map, p.x, p.y, p.z + posChange, 16, t);     
+            map_set(map, p.x, p.y, p.z + posChange, 16, t);     
         }
         clouds.pop_back();
     }
